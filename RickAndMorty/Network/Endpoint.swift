@@ -8,13 +8,13 @@
 import Foundation
 
 protocol Endpoint {
-    var body: Data? { get set }
-    var headers: [String: String]  { get set }
-    var scheme: String { get set }
-    var host: String { get set }
-    var method: HTTPMethod  { get set }
-    var path: String  { get set }
-    var params: [String: String] { get set }
+    var body: Data? { get }
+    var headers: [String: String]  { get }
+    var scheme: String { get }
+    var host: String { get }
+    var method: HTTPMethod  { get }
+    var path: String  { get }
+    var params: [String: String] { get }
 }
 
 extension Endpoint {
@@ -36,6 +36,10 @@ extension Endpoint {
     }
     
     var headers: [String:String] {
+        return [:]
+    }
+    
+    var params: [String: String] {
         return [:]
     }
 }
