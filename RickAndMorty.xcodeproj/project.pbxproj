@@ -17,6 +17,7 @@
 		3085589926FE811C002AACA3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085589826FE811C002AACA3 /* Network.swift */; };
 		3085589C26FE9100002AACA3 /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085589B26FE9100002AACA3 /* ViewCoding.swift */; };
 		3085589F26FE92D4002AACA3 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085589E26FE92D4002AACA3 /* CharacterModel.swift */; };
+		308558A226FE9441002AACA3 /* CharacterListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308558A126FE9441002AACA3 /* CharacterListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3085589826FE811C002AACA3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3085589B26FE9100002AACA3 /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		3085589E26FE92D4002AACA3 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		308558A126FE9441002AACA3 /* CharacterListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3085589E26FE92D4002AACA3 /* CharacterModel.swift */,
+				308558A126FE9441002AACA3 /* CharacterListService.swift */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				3085589526FE7F08002AACA3 /* HTTPMethod.swift in Sources */,
 				3085587C26FE7B9D002AACA3 /* AppDelegate.swift in Sources */,
+				308558A226FE9441002AACA3 /* CharacterListService.swift in Sources */,
 				3085589926FE811C002AACA3 /* Network.swift in Sources */,
 				3085589326FE7E5E002AACA3 /* APIError.swift in Sources */,
 				3085589C26FE9100002AACA3 /* ViewCoding.swift in Sources */,

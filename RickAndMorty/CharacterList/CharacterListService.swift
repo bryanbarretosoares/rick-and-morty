@@ -1,0 +1,33 @@
+//
+//  CharacterListService.swift
+//  RickAndMorty
+//
+//  Created by Bryan Barreto Soares on 24/09/21.
+//
+
+import Foundation
+
+enum CharacterEndpoint {
+    case getAllCharacters
+}
+
+extension CharacterEndpoint: Endpoint {
+    var path: String {
+        return "/api/character"
+    }
+}
+
+protocol CharacterListServicing {
+    func fetch(completion: @escaping (Result<Response, APIError>) -> Void)
+}
+
+class CharacterListService {
+    
+}
+
+extension CharacterListService: CharacterListServicing {
+    func fetch(completion: @escaping (Result<Response, APIError>) -> Void) {
+        let endpoint: CharacterEndpoint = .getAllCharacters
+        Network.shared.fetch(endpoint: endpoint, completion: completion)
+    }
+}
