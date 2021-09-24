@@ -14,6 +14,7 @@
 		3085589326FE7E5E002AACA3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085589226FE7E5E002AACA3 /* APIError.swift */; };
 		3085589526FE7F08002AACA3 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085589426FE7F08002AACA3 /* HTTPMethod.swift */; };
 		3085589726FE7F37002AACA3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085589626FE7F37002AACA3 /* Endpoint.swift */; };
+		3085589926FE811C002AACA3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085589826FE811C002AACA3 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3085589226FE7E5E002AACA3 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		3085589426FE7F08002AACA3 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3085589626FE7F37002AACA3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3085589826FE811C002AACA3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				3085589226FE7E5E002AACA3 /* APIError.swift */,
 				3085589426FE7F08002AACA3 /* HTTPMethod.swift */,
 				3085589626FE7F37002AACA3 /* Endpoint.swift */,
+				3085589826FE811C002AACA3 /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				3085589526FE7F08002AACA3 /* HTTPMethod.swift in Sources */,
 				3085587C26FE7B9D002AACA3 /* AppDelegate.swift in Sources */,
+				3085589926FE811C002AACA3 /* Network.swift in Sources */,
 				3085589326FE7E5E002AACA3 /* APIError.swift in Sources */,
 				3085587E26FE7B9D002AACA3 /* SceneDelegate.swift in Sources */,
 				3085589726FE7F37002AACA3 /* Endpoint.swift in Sources */,

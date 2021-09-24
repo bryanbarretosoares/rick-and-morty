@@ -10,15 +10,21 @@ import Foundation
 protocol Endpoint {
     var body: Data? { get set }
     var headers: [String: String]  { get set }
-    var baseURL: String  { get set }
+    var scheme: String { get set }
+    var host: String { get set }
     var method: HTTPMethod  { get set }
-    var endpoint: String  { get set }
+    var path: String  { get set }
     var params: [String: String] { get set }
 }
 
 extension Endpoint {
-    var baseURL: String {
-        return "https://rickandmortyapi.com/api/"
+    
+    var scheme: String {
+        return "https"
+    }
+    
+    var host: String {
+        return "rickandmortyapi.com"
     }
     
     var method: HTTPMethod {
@@ -30,10 +36,6 @@ extension Endpoint {
     }
     
     var headers: [String:String] {
-        return [:]
-    }
-    
-    var params: [String: String] {
         return [:]
     }
 }
