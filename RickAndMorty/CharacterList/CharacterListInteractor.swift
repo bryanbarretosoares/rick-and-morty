@@ -13,10 +13,12 @@ protocol CharacterListInteracting {
 
 class CharacterListInteractor {
     
-    let service: CharacterListServicing
+    private let service: CharacterListServicing
+    private let presenter: CharacterListPresenting
     
-    init(service: CharacterListServicing) {
+    init(service: CharacterListServicing, presenter: CharacterListPresenting) {
         self.service = service
+        self.presenter = presenter
     }
 }
 

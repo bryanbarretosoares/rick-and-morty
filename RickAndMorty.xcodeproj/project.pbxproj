@@ -19,6 +19,10 @@
 		3085589F26FE92D4002AACA3 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085589E26FE92D4002AACA3 /* CharacterModel.swift */; };
 		308558A226FE9441002AACA3 /* CharacterListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308558A126FE9441002AACA3 /* CharacterListService.swift */; };
 		308558A426FE9515002AACA3 /* CharacterListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308558A326FE9515002AACA3 /* CharacterListInteractor.swift */; };
+		308558A626FE9594002AACA3 /* CharacterListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308558A526FE9594002AACA3 /* CharacterListPresenter.swift */; };
+		308558A826FE95E9002AACA3 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308558A726FE95E9002AACA3 /* CharacterListViewController.swift */; };
+		308558AA26FE962E002AACA3 /* CharacterListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308558A926FE962E002AACA3 /* CharacterListCoordinator.swift */; };
+		308558AC26FE9772002AACA3 /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308558AB26FE9772002AACA3 /* CharacterListFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		3085589E26FE92D4002AACA3 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		308558A126FE9441002AACA3 /* CharacterListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListService.swift; sourceTree = "<group>"; };
 		308558A326FE9515002AACA3 /* CharacterListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractor.swift; sourceTree = "<group>"; };
+		308558A526FE9594002AACA3 /* CharacterListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenter.swift; sourceTree = "<group>"; };
+		308558A726FE95E9002AACA3 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		308558A926FE962E002AACA3 /* CharacterListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCoordinator.swift; sourceTree = "<group>"; };
+		308558AB26FE9772002AACA3 /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 				3085589E26FE92D4002AACA3 /* CharacterModel.swift */,
 				308558A126FE9441002AACA3 /* CharacterListService.swift */,
 				308558A326FE9515002AACA3 /* CharacterListInteractor.swift */,
+				308558A526FE9594002AACA3 /* CharacterListPresenter.swift */,
+				308558A726FE95E9002AACA3 /* CharacterListViewController.swift */,
+				308558A926FE962E002AACA3 /* CharacterListCoordinator.swift */,
+				308558AB26FE9772002AACA3 /* CharacterListFactory.swift */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -182,9 +194,13 @@
 				3085589526FE7F08002AACA3 /* HTTPMethod.swift in Sources */,
 				3085587C26FE7B9D002AACA3 /* AppDelegate.swift in Sources */,
 				308558A226FE9441002AACA3 /* CharacterListService.swift in Sources */,
+				308558AA26FE962E002AACA3 /* CharacterListCoordinator.swift in Sources */,
+				308558A826FE95E9002AACA3 /* CharacterListViewController.swift in Sources */,
 				3085589926FE811C002AACA3 /* Network.swift in Sources */,
 				3085589326FE7E5E002AACA3 /* APIError.swift in Sources */,
+				308558A626FE9594002AACA3 /* CharacterListPresenter.swift in Sources */,
 				3085589C26FE9100002AACA3 /* ViewCoding.swift in Sources */,
+				308558AC26FE9772002AACA3 /* CharacterListFactory.swift in Sources */,
 				3085589F26FE92D4002AACA3 /* CharacterModel.swift in Sources */,
 				3085587E26FE7B9D002AACA3 /* SceneDelegate.swift in Sources */,
 				3085589726FE7F37002AACA3 /* Endpoint.swift in Sources */,
