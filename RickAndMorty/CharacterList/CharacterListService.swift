@@ -8,17 +8,24 @@
 import Foundation
 
 enum CharacterEndpoint {
-    case getAllCharacters
+    case getAllCharacters(page: Int)
 }
 
 extension CharacterEndpoint: Endpoint {
     var path: String {
         return "/api/character"
     }
+    
+    var params: [String : String] {
+        switch self {
+        case .getAllCharacters(page: let page):
+            return ["page":"\(page)"]
+        }
+    }
 }
 
 protocol CharacterListServicing {
-    func fetch(completion: @escaping (Result<Response, APIError>) -> Void)
+    func fetch(page: Int, completion: @escaping (Result<Response, APIError>) -> Void)
 }
 
 class CharacterListService {
@@ -26,8 +33,8 @@ class CharacterListService {
 }
 
 extension CharacterListService: CharacterListServicing {
-    func fetch(completion: @escaping (Result<Response, APIError>) -> Void) {
-        let endpoint: CharacterEndpoint = .getAllCharacters
+    func fetch(page: Int, completion: @escaping (Result<Response, APIError>) -> Void) {
+        let endpoint: CharacterEndpoint = .getAllCharacters(page: page)
         Network.shared.fetch(endpoint: endpoint, completion: completion)
     }
 }

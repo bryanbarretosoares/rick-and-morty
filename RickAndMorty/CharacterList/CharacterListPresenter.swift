@@ -16,8 +16,9 @@ protocol CharacterListPresenting {
 }
 
 class CharacterListPresenter {
+    
     weak var viewController: CharacterListDisplaying?
-    let coordinator: CharacterListCoordinating
+    private let coordinator: CharacterListCoordinating
     
     init(coordinator: CharacterListCoordinating) {
         self.coordinator = coordinator
@@ -26,10 +27,13 @@ class CharacterListPresenter {
 
 extension CharacterListPresenter: CharacterListPresenting {
     func didFetch(_ characters: [Character]) {
-        
+        let viewModels = characters.map {
+            return CharacterViewModel(model: $0)
+        }
+        viewController?.display(characters: viewModels)
     }
     
     func didFetch(_ error: APIError) {
-        
+        viewController?.display(message: error.localizedDescription)
     }
 }

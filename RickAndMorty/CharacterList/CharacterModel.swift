@@ -7,6 +7,19 @@
 
 import Foundation
 
+enum Status: String, Decodable {
+    case alive = "Alive"
+    case dead = "Dead"
+    case unknown = "unknown"
+}
+
+enum Gender: String, Decodable {
+    case female = "Female"
+    case male = "Male"
+    case genderless = "Genderless"
+    case unknown = "unknown"
+}
+
 struct Response: Decodable {
     let info: Info
     let results: [Character]
@@ -21,10 +34,9 @@ struct Info: Decodable {
 struct Character: Decodable {
     let id: Int
     let name: String
-    let status: String
+    let status: Status
     let species: String
-    let gender: String
     let type: String
     let image: String
-    
+    let gender: Gender
 }
