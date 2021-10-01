@@ -13,6 +13,8 @@ protocol CharacterListPresenting {
     
     func didFetch(_ characters: [Character])
     func didFetch(_ error: APIError)
+    
+    func presentDetailScreen(with id: Int)
 }
 
 class CharacterListPresenter {
@@ -35,5 +37,9 @@ extension CharacterListPresenter: CharacterListPresenting {
     
     func didFetch(_ error: APIError) {
         viewController?.display(message: error.localizedDescription)
+    }
+    
+    func presentDetailScreen(with id: Int) {
+        coordinator.perform(action: .goToDetail(id))
     }
 }

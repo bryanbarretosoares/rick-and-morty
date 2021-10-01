@@ -10,6 +10,7 @@ import Foundation
 protocol CharacterListInteracting {
     func fetchCharacter()
     func fetchMore()
+    func tapCharacter(at index: Int)
 }
 
 class CharacterListInteractor {
@@ -20,6 +21,8 @@ class CharacterListInteractor {
     private var isLoading = false
     private var page: Int = 1
     
+    private var characters: [Character] = []
+    
     init(service: CharacterListServicing, presenter: CharacterListPresenting) {
         self.service = service
         self.presenter = presenter
@@ -27,6 +30,11 @@ class CharacterListInteractor {
 }
 
 extension CharacterListInteractor: CharacterListInteracting {
+    func tapCharacter(at index: Int) {
+        let id = characters[index].id
+        presenter.presentDetailScreen(with: id)
+    }
+    
     func fetchCharacter() {
         
         isLoading = true
@@ -35,6 +43,7 @@ extension CharacterListInteractor: CharacterListInteracting {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
+                    self?.characters.append(contentsOf: response.results)
                     self?.presenter.didFetch(response.results)
                     self?.page += 1
                 case .failure(let error):
@@ -47,12 +56,6 @@ extension CharacterListInteractor: CharacterListInteracting {
     }
     
     func fetchMore() {
-        
-//        Condicional para parar de carregar na página 3 e exibir a célula de loading
-        if page == 3 {
-            return
-        }
-        
         if !isLoading {
             fetchCharacter()
         }

@@ -85,7 +85,7 @@ extension CharacterListViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterListCell.id, for: indexPath) as? CharacterListCell else {
             return UITableViewCell()
         }
-
+        
         let characterViewModel = characters[indexPath.row]
         cell.config(characterViewModel: characterViewModel)
         return cell
@@ -93,6 +93,11 @@ extension CharacterListViewController: UITableViewDataSource {
 }
 
 extension CharacterListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor.tapCharacter(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
